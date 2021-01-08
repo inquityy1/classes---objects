@@ -16,13 +16,13 @@ class ShoppingCart {
 	items = [];
 	
 	set cartItems(value) {
-		this.item = value;
+		this.items = value;
 		this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount.toFixed(2)}</h2>`;
 
 	}
 	
 	get totalAmount() {
-		const sum = this.item.reduce(
+		const sum = this.items.reduce(
 			(prevValue, curItem) => prevValue + curItem.price,
 			0
 		);
